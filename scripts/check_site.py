@@ -9,7 +9,7 @@ site = root/'site'
 html = (site/'index.html').read_text(encoding='utf-8')
 metadata_path = site/'version.json'
 metadata = json.loads(metadata_path.read_text(encoding='utf-8'))
-assert metadata['version'] == 'lesson30-v1'
+assert metadata['version'] == 'lesson31-v2'
 assert '<html lang="en">' in html and 'name="viewport"' in html
 assert 'id="version">'+metadata['version'] in html
 assert 'id="commit"' in html and "fetch('version.json')" in html
